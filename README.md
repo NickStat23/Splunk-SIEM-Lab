@@ -72,7 +72,7 @@ Tracking a live password spray simulation against the Domain Controller using Cr
 A high-severity detection rule tracking unauthorized privilege escalation. When a backdoor administrator account named "hacker" is created and added to the local administrators group via PowerShell, Splunk instantly catches it by correlation filtering for Windows Event Codes 4720 and 4732.
 
 ### 5. Raw Suricata IDS Search
-![Suricata_Search](images/Suricata_Search1.png)
+![Suricata_Search](images/Suricata_Search.png)
 Diving into the raw Suricata network signature logs inside Splunk to investigate automated network probes, malicious traffic patterns, and dropped packets.
 
 ---
