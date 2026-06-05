@@ -86,7 +86,7 @@ The top section of my custom Security Operations Center (SOC) dashboard. It aggr
 The lower half of the SOC dashboard, featuring a dedicated panel for Suricata IDS logs. This brings deep network intrusion alerts directly into the same view as the system event logs.
 
 ### Raw Suricata IDS Search
-![Suricata_Search](images/Suricata_Search1.png)
+![Suricata_Search](images/Suricata_Search.png)
 Diving into the raw Suricata network signature logs inside Splunk to investigate automated network probes, malicious traffic patterns, and dropped packets.
 
 ### Splunk User Audit Trail
