@@ -65,7 +65,7 @@ Splunk Security Essentials dashboard catching a massive brute-force attack consi
 
 ### 3. CrackMapExec Password Spraying
 ![Password_Spray_DC](images/Password_Spray_DC1.png)
-Tracking a live password spray simulation against the Domain Controller using CrackMapExec. The logs catch the exact moments the tool attempts to authenticate across multiple network accounts to find a weakness.
+Live CrackMapExec password spray against the Domain Controller. The attack successfully identified the domain administrator password from the rockyou.txt wordlist, returning a Pwn3d! result in under 2 minutes. This highlights the real-world risk of weak credentials on privileged accounts and is exactly why password complexity policies and account lockout thresholds matter; a simple password on a domain admin account gives an attacker full control of the entire Active Directory environment in seconds.
 
 ### 4. Rogue Local Admin Creation
 ![New_Admin_Acct_Creation_Detection](images/New_Admin_Acct_Creation_Detection1.png)
