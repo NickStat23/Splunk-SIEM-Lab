@@ -56,23 +56,23 @@ Once logging was fully set up, I used Kali Linux to run various offensive simula
 The main Alerts dashboard showing my three active, custom-engineered rules enabled and monitoring the environment: Brute Force Detection, New Admin Account Created, and Suricata IDS Alert Detected.
 
 ### 1. Nmap Scan Detection
-![Nmap_Scan_DC](images/Nmap_Scan_DC.png)
+![Nmap_Scan_DC](images/Nmap_Scan_DC1.png)
 Running an aggressive Nmap scan (`nmap -sS -sV -A`) from a Kali Linux VM against the Active Directory Domain Controller. Splunk monitors the rapid connection attempts to detect the reconnaissance phase before an actual attack happens.
 
 ### 2. Brute-Force Attack Logs
-![BruteForce_Log](images/BruteForce_Log.png)
+![BruteForce_Log](images/BruteForce_Log1.png)
 Splunk Security Essentials dashboard catching a massive brute-force attack consisting of 3,509 failed authentication attempts originating from the Kali Linux host machine. The analytics automatically map out the top targeted accounts and source IPs.
 
 ### 3. CrackMapExec Password Spraying
-![Password_Spray_DC](images/Password_Spray_DC.png)
+![Password_Spray_DC](images/Password_Spray_DC1.png)
 Tracking a live password spray simulation against the Domain Controller using CrackMapExec. The logs catch the exact moments the tool attempts to authenticate across multiple network accounts to find a weakness.
 
 ### 4. Rogue Local Admin Creation
-![New_Admin_Acct_Creation_Detection](images/New_Admin_Acct_Creation_Detection.png)
+![New_Admin_Acct_Creation_Detection](images/New_Admin_Acct_Creation_Detection1.png)
 A high-severity detection rule tracking unauthorized privilege escalation. When a backdoor administrator account named "hacker" is created and added to the local administrators group via PowerShell, Splunk instantly catches it by correlation filtering for Windows Event Codes 4720 and 4732.
 
 ### 5. Raw Suricata IDS Search
-![Suricata_Search](images/Suricata_Search.png)
+![Suricata_Search](images/Suricata_Search1.png)
 Diving into the raw Suricata network signature logs inside Splunk to investigate automated network probes, malicious traffic patterns, and dropped packets.
 
 ---
@@ -82,7 +82,7 @@ Diving into the raw Suricata network signature logs inside Splunk to investigate
 To keep things organized, I built dashboards to monitor overall network health and specific security alerts in one place.
 
 ### SOC Security Monitoring Dashboard v2
-![SOC_Dashboard_v2](images/SOC_Dashboard_v2.png)
+![SOC_Dashboard_v2](images/SOC_Dashboard.png)
 A fully consolidated Security Operations Center dashboard built to surface the most important security data across the entire environment in a single view. The dashboard covers four core areas: a Failed Logon Attempts Over Time chart tracking authentication failures over the last 7 days (10,309 total during testing), a pie chart breaking down failed login volume by time window to identify attack patterns, a Top Event IDs bar chart visualizing the most frequently triggered Windows Event Codes across all endpoints, a pfSense Suricata IDS Alerts panel displaying live network intrusion signatures ranked by hit count, and a New Account and Privilege Escalation Events table correlating Event Codes 4720 and 4732 to catch unauthorized account creation and group membership changes in real time.
 
 ---
