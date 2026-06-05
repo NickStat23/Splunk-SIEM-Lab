@@ -95,6 +95,11 @@ The centralized Audit Trail Dashboard used to monitor internal SIEM health. It t
 
 ---
 
+## Disclaimer
+All activities documented in this project were performed on a privately owned, isolated home lab network. No external systems, public infrastructure, or third-party networks were targeted or affected. This project is for educational and portfolio purposes only.
+
+---
+
 ## 🙋 Author
 
 **Nick Efstathiou** Cybersecurity | Network Engineering | Home Lab  
